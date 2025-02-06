@@ -35,7 +35,7 @@ public interface OgrenciRepository extends JpaRepository<Ogrenci, Long> {
     List<Ogrenci> findGirlsWithOgrno();
 
     // Öğrencileri adına göre sıralayınız (alfabetik)
-    String QUESTION_6 = "SELECT * FROM ogrenci ORDER BY ad";
+    String QUESTION_6 = "SELECT * FROM ogrenci ORDER BY ad"; //pc türkçe olduğu için bu hatayı veriyor. Hoca sıkıntı olmadığını söyledi.
     @Query(value = QUESTION_6, nativeQuery = true)
     List<Ogrenci> findStudentsAlphabetically();
 
